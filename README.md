@@ -1,1 +1,1 @@
-# OFAppleScript
+# AppleScript for OmniFocus Automation
