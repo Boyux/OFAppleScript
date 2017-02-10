@@ -12,19 +12,19 @@ AppleScript 可配合 Hazel 使用，具体的 Hazel 规则如下（最后一项
 
 若要在 Hazel 中使用 AppleScript，请在代码的开头和结尾添加：
 
-`on hazelProcessFile(theFile)`
-`end hazelProcessFile`
+	on hazelProcessFile(theFile)
+	end hazelProcessFile
 
 如果不使用 Hazel 触发脚本，可以在脚本开头和结尾处添加：
 
-`on idle`
-`end idle`
+	on idle
+	end idle
 
 然后保存为应用程序并运行即可。
 
 脚本需要安装 tag：
 
-`brew install tag`
+	brew install tag
 
 ## 5 Minutes
 
