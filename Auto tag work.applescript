@@ -41,7 +41,7 @@ on hazelProcessFile(theFile)
 				
 				if theList is not equal to {} then
 					
-					set activeProject to (name of every project of f where its status is not on hold and completed is not true and status is not dropped)
+					set activeProject to (name of every project of f where its status is not on hold and completed is not true and status is not dropped and its modification date is greater than startDate)
 					repeat with p1 in activeProject
 						
 						set newString to {}
@@ -63,7 +63,7 @@ on hazelProcessFile(theFile)
 						end tell
 					end repeat
 					
-					set pauseProject to (name of every project of f where its status is on hold)
+					set pauseProject to (name of every project of f where its status is on hold and its modification date is greater than startDate)
 					repeat with p2 in pauseProject
 						
 						set newString to {}
@@ -85,7 +85,7 @@ on hazelProcessFile(theFile)
 						end tell
 					end repeat
 					
-					set flaggedProject to (name of every project of f where its flagged is true and its completed is not true and its status is not dropped)
+					set flaggedProject to (name of every project of f where its flagged is true and its completed is not true and its status is not dropped and its modification date is greater than startDate)
 					repeat with p5 in flaggedProject
 						
 						set newString to {}
@@ -102,7 +102,7 @@ on hazelProcessFile(theFile)
 						do shell script "/usr/local/bin/tag -a Flagged ~/Documents/" & n5
 					end repeat
 					
-					set completedProject to (name of every project of f where its completed is true or its status is dropped)
+					set completedProject to (name of every project of f where its completed is true or its status is dropped and its modification date is greater than startDate)
 					repeat with p3 in completedProject
 						
 						set newString to {}
