@@ -31,7 +31,7 @@ on hazelProcessFile(theFile)
 					
 					set n to newString as string
 					
-					do shell script "/usr/local/bin/tag -s 2.Arranging ~/Documents/" & n
+					do shell script "/usr/local/bin/tag -s Writing ~/Documents/" & n
 				end if
 				
 				if theTask contains t then
@@ -47,7 +47,7 @@ on hazelProcessFile(theFile)
 					
 					set n to newString as string
 					
-					do shell script "/usr/local/bin/tag -s 3.Complete ~/Documents/" & n
+					do shell script "/usr/local/bin/tag -s Complete ~/Documents/" & n
 				end if
 				
 			end repeat
