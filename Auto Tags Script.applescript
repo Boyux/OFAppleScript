@@ -75,7 +75,7 @@ on hazelProcessFile(theFile)
 					
 					set n to newString as string
 					
-					do shell script "/usr/local/bin/tag -a 0.Flagged ~/Documents/" & n
+					do shell script "/usr/local/bin/tag -a Flagged ~/Documents/" & n
 				end if
 				
 			end repeat
