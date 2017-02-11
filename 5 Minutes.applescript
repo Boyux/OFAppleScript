@@ -4,7 +4,7 @@ on hazelProcessFile(theFile)
 	
 	tell application "OmniFocus"
 		tell front document
-			set theProject to first flattened project where its name is "Project"
+			set theProject to first flattened project where its name is "theProject"
 			set theTime to modification date of theProject
 			if theTime is greater than theDate then
 				set theTask to every task in theProject where its completed is not true and its modification date is greater than theDate and its estimated minutes is missing value
