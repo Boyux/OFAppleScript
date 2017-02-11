@@ -1,24 +1,26 @@
 on hazelProcessFile(theFile)
 	
 	set startDate to (current date) - 20 * minutes
-	set filepath to alias "HD:Users:User:Documents"
+	set filepath to alias "HD:Users:User:Documents:Work"
 	
 	tell application "OmniFocus"
 		tell front document
 			set theFolder to first flattened folder where its name = "Folder"
 			set subFolder to every folder of theFolder
 			repeat with f in subFolder
-				set theProject to name of every project of f
-				repeat with p0 in theProject
-					
-					tell application "Finder"
-						set foldername0 to name of every folder in filepath
-						if foldername0 does not contain p0 then
-							tell application "Finder" to make new folder at filepath with properties {name:p0}
-						end if
-					end tell
-					
-				end repeat
+				set theProject to (name of every project of f where its modification date is greater than startDate)
+				if number of theProject is greater than 0 then
+					repeat with p0 in theProject
+						
+						tell application "Finder"
+							set foldername0 to name of every folder in filepath
+							if foldername0 does not contain p0 then
+								tell application "Finder" to make new folder at filepath with properties {name:p0}
+							end if
+						end tell
+						
+					end repeat
+				end if
 			end repeat
 			
 		end tell
