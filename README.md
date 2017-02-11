@@ -1,5 +1,7 @@
 # OmniFocus 自动化脚本（AppleScript）
 
+**具体使用方式可参照我的博客：[http://wp.me/p3KZxa-ua][1]**
+
 一些 OmniFocus 的自动化脚本，包括：
 
 - 自动给某项目内的任务添加默认持续时间 5 分钟；
@@ -43,5 +45,7 @@ AppleScript 可配合 Hazel 使用，具体的 Hazel 规则如下（最后一项
 ## Auto Tags Script
 
 该脚本用于对写作产生的文本文件进行标签设置，其功能与“Auto tag work”类似，但针对单个任务而非项目。
+
+[1]:	http://wp.me/p3KZxa-ua
 
 [image-1]:	https://dl.dropboxusercontent.com/s/6txqqigecgpzse4/AppleScript.png%20
