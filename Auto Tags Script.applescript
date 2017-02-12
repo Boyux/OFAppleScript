@@ -7,7 +7,7 @@ on hazelProcessFile(theFile)
 		tell front document
 			set theContext to first flattened context where its name = "context"
 			set theTask to name of every flattened task where its context = theContext and completed = true and completion date is greater than startDate
-			set flaggedTask to name of every flattened task where its flagged is true and its completed is not true and its modification date is greater than startDate
+			set flaggedTask to name of every flattened task where its flagged is true and its completed is not true
 		end tell
 	end tell
 	
