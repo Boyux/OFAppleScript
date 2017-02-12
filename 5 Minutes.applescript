@@ -7,7 +7,7 @@ on hazelProcessFile(theFile)
 			set theProject to first flattened project where its name is "theProject"
 			set theTime to modification date of theProject
 			if theTime is greater than theDate then
-				set theTask to every task in theProject where its completed is not true and its modification date is greater than theDate and its estimated minutes is missing value
+				set theTask to every task in theProject where its completed is not true and its estimated minutes is missing value
 				repeat with t in theTask
 					set estimated minutes of t to 5
 				end repeat
